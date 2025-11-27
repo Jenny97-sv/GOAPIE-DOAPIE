@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Retail|x64">
+      <Configuration>Retail</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\BinDebug-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\..\..\..\BoidTime\GameName\Bin-intDebug-windows-x86_64\Engine\</IntDir>
+    <TargetName>Engine</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <ExternalIncludePath>src;..\External;..;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\BinRelease-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\..\..\..\BoidTime\GameName\Bin-intRelease-windows-x86_64\Engine\</IntDir>
+    <TargetName>Engine</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <ExternalIncludePath>src;..\External;..;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <OutDir>..\..\BinRetail-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\..\..\..\BoidTime\GameName\Bin-intRetail-windows-x86_64\Engine\</IntDir>
+    <TargetName>Engine</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <ExternalIncludePath>src;..\External;..;$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>_DEBUG;WINDOWS;WIN32;_CRT_SECURE_NO_WARNINGS;_LIB;_WIN32_WINNT=0x0602;_SILENCE_CXX20_CISO646_REMOVED_WARNING;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>CU-d.lib;DirectXTK-d.lib;DXGI.lib;dxguid.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Resources\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;WINDOWS;WIN32;_CRT_SECURE_NO_WARNINGS;_LIB;_WIN32_WINNT=0x0602;_SILENCE_CXX20_CISO646_REMOVED_WARNING;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>CU.lib;DirectXTK.lib;DXGI.lib;dxguid.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Resources\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <PreprocessorDefinitions>NDEBUG;WINDOWS;WIN32;_CRT_SECURE_NO_WARNINGS;_LIB;_WIN32_WINNT=0x0602;_SILENCE_CXX20_CISO646_REMOVED_WARNING;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+    </ClCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>CU.lib;DirectXTK.lib;DXGI.lib;dxguid.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Resources\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Engine\Animation\AnimationPlayer.h" />
+    <ClInclude Include="src\Engine\AudioEngine.h" />
+    <ClInclude Include="src\Engine\Components\AnimationComponent.h" />
+    <ClInclude Include="src\Engine\Components\Component.h" />
+    <ClInclude Include="src\Engine\Components\SpriteRendererComponent.h" />
+    <ClInclude Include="src\Engine\Components\StatsComponent.h" />
+    <ClInclude Include="src\Engine\Components\TransformComponent.h" />
+    <ClInclude Include="src\Engine\Engine.h" />
+    <ClInclude Include="src\Engine\GameObject\GameObject.h" />
+    <ClInclude Include="src\Engine\Graphics\Camera.h" />
+    <ClInclude Include="src\Engine\Graphics\Camera\Camera.h" />
+    <ClInclude Include="src\Engine\Graphics\DDSTextureLoader\DDSTextureLoader11.h" />
+    <ClInclude Include="src\Engine\Graphics\DepthBuffer.h" />
+    <ClInclude Include="src\Engine\Graphics\FullScreenEffect\FullscreenEffect.h" />
+    <ClInclude Include="src\Engine\Graphics\GBuffer\GBuffer.h" />
+    <ClInclude Include="src\Engine\Graphics\GraphicsEngine.h" />
+    <ClInclude Include="src\Engine\Graphics\GraphicsEngineData.h" />
+    <ClInclude Include="src\Engine\Graphics\RayTracing\RayTracing.h" />
+    <ClInclude Include="src\Engine\Graphics\RenderTarget.h" />
+    <ClInclude Include="src\Engine\Graphics\ShaderCode\Shader.h" />
+    <ClInclude Include="src\Engine\Graphics\Sprite\Sprite.h" />
+    <ClInclude Include="src\Engine\Graphics\Sprite\SpriteDrawer.h" />
+    <ClInclude Include="src\Engine\Graphics\StringHelper\StringHelper.h" />
+    <ClInclude Include="src\Engine\Graphics\Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Engine\Animation\AnimationPlayer.cpp" />
+    <ClCompile Include="src\Engine\Engine.cpp" />
+    <ClCompile Include="src\Engine\GameObject\GameObject.cpp" />
+    <ClCompile Include="src\Engine\Graphics\Camera.cpp" />
+    <ClCompile Include="src\Engine\Graphics\Camera\Camera.cpp">
+      <ObjectFileName>$(IntDir)\Camera1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\DDSTextureLoader\DDSTextureLoader11.cpp" />
+    <ClCompile Include="src\Engine\Graphics\DepthBuffer.cpp" />
+    <ClCompile Include="src\Engine\Graphics\FullScreenEffect\FullscreenEffect.cpp" />
+    <ClCompile Include="src\Engine\Graphics\GBuffer\GBuffer.cpp" />
+    <ClCompile Include="src\Engine\Graphics\GraphicsEngine.cpp" />
+    <ClCompile Include="src\Engine\Graphics\RayTracing\RayTracing.cpp" />
+    <ClCompile Include="src\Engine\Graphics\RenderTarget.cpp" />
+    <ClCompile Include="src\Engine\Graphics\ShaderCode\Shader.cpp" />
+    <ClCompile Include="src\Engine\Graphics\Sprite\Sprite.cpp" />
+    <ClCompile Include="src\Engine\Graphics\Sprite\SpriteDrawer.cpp" />
+    <ClCompile Include="src\Engine\Graphics\StringHelper\StringHelper.cpp" />
+    <ClCompile Include="src\Engine\Graphics\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="RayTracerTest_PS.hlsl">
+      <ShaderType>Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="RayTracerTest_VS.hlsl">
+      <ShaderType>Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="RayTracing_CS.hlsl">
+      <ShaderType>Compute</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common.hlsli" />
+    <None Include="RayTracingStructs.hlsli" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

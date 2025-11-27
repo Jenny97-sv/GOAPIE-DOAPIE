@@ -1,0 +1,4 @@
+﻿  GraphicsEngine.cpp
+  MaktusEngine.cpp
+D:\VisualStudio\MaktusEngine\MaktusEngine\GraphicsEngineData.h(4,10): error C1083: Cannot open include file: 'CommonUtilites\Vector\Vector.h': No such file or directory
+  Generating Code...

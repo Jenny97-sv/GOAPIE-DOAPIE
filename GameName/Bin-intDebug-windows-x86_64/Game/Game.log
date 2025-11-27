@@ -1,0 +1,3 @@
+﻿  Level.cpp
+Engine.lib(SpriteBatch.obj) : warning LNK4099: PDB '' was not found with 'Engine.lib(SpriteBatch.obj)' or at ''; linking object as if no debug info
+  Game.vcxproj -> C:\Users\eriks\OneDrive\Skrivbord\Runner\GameName\BinDebug-windows-x86_64\Game\Game.exe

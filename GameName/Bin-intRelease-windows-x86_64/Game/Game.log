@@ -1,0 +1,42 @@
+﻿  App.cpp
+  Collider.cpp
+  DebugDrawer.cpp
+  DebugShapes.cpp
+  DrawLine.cpp
+  Bat.cpp
+  CaterPillar.cpp
+  AttackOtherEnemy.cpp
+  BatAttacking.cpp
+  BatWalking.cpp
+  CaterPillarAttacking.cpp
+  CaterPillarWalking.cpp
+  GooAttacking.cpp
+  GooWalking.cpp
+  Goo.cpp
+  GameObject.cpp
+  GameWorld.cpp
+  KnockBack.cpp
+  ObjectPool.cpp
+  HealthPickup.cpp
+  RandomPickup.cpp
+  Player.cpp
+  PlayerDash.cpp
+  PlayerSlash.cpp
+  PlayerThrow.cpp
+  Random.cpp
+  CU.lib(Timer.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+  Generating code
+  Finished generating code
+DirectXTK.lib(CommonStates.obj) : warning LNK4099: PDB '' was not found with 'DirectXTK.lib(CommonStates.obj)' or at ''; linking object as if no debug info
+DirectXTK.lib(PrimitiveBatch.obj) : warning LNK4099: PDB '' was not found with 'DirectXTK.lib(PrimitiveBatch.obj)' or at ''; linking object as if no debug info
+DirectXTK.lib(BasicEffect.obj) : warning LNK4099: PDB '' was not found with 'DirectXTK.lib(BasicEffect.obj)' or at ''; linking object as if no debug info
+DirectXTK.lib(VertexTypes.obj) : warning LNK4099: PDB '' was not found with 'DirectXTK.lib(VertexTypes.obj)' or at ''; linking object as if no debug info
+DirectXTK.lib(pch.obj) : warning LNK4099: PDB '' was not found with 'DirectXTK.lib(pch.obj)' or at ''; linking object as if no debug info
+DirectXTK.lib(EffectCommon.obj) : warning LNK4099: PDB '' was not found with 'DirectXTK.lib(EffectCommon.obj)' or at ''; linking object as if no debug info
+DirectXTK.lib(BufferHelpers.obj) : warning LNK4099: PDB '' was not found with 'DirectXTK.lib(BufferHelpers.obj)' or at ''; linking object as if no debug info
+Engine.lib(SpriteBatch.obj) : warning LNK4099: PDB '' was not found with 'Engine.lib(SpriteBatch.obj)' or at ''; linking object as if no debug info
+Engine.lib(DDSTextureLoader.obj) : warning LNK4099: PDB '' was not found with 'Engine.lib(DDSTextureLoader.obj)' or at ''; linking object as if no debug info
+CU.lib(Timer.obj) : warning LNK4099: PDB '' was not found with 'CU.lib(Timer.obj)' or at ''; linking object as if no debug info
+CU.lib(pch.obj) : warning LNK4099: PDB '' was not found with 'CU.lib(pch.obj)' or at ''; linking object as if no debug info
+Engine.lib(InputHandler.obj) : warning LNK4099: PDB '' was not found with 'Engine.lib(InputHandler.obj)' or at ''; linking object as if no debug info
+  Game.vcxproj -> C:\Users\Jenny\Documents\GitHub\JennyMarcusCringe\JennyMarcusCringe\GameName\BinRelease-windows-x86_64\Game\Game.exe

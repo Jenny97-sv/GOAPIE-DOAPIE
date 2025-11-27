@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="BehaviorTree">
+      <UniqueIdentifier>{45B58CE0-3118-1C85-DA9D-543BC6DFE707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{6B7DD516-5735-1764-C03C-F0BFAC13B254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemy">
+      <UniqueIdentifier>{C3A81D0D-2FBD-45BE-F83E-E91D641242EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemy\EnemyNodes">
+      <UniqueIdentifier>{69D7823C-55D0-A18E-7E02-87136A5A819A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemy\EnemyStates">
+      <UniqueIdentifier>{84A3E0D8-F0B9-DE6E-3931-6A90A586AFF6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Food">
+      <UniqueIdentifier>{ED58857C-D98F-860D-827C-6C106E92020F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Food\States">
+      <UniqueIdentifier>{1006FCDA-7CBB-74D0-05B0-6EA771646BD4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectPool">
+      <UniqueIdentifier>{169EDF2D-0256-217B-6B5D-FAD65734BC6B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{724E55CA-5EF0-7FA0-47AB-93F433EC06F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player\PlayerStates">
+      <UniqueIdentifier>{22007B20-8E61-582E-17CF-9EE0832F8FED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostMaster">
+      <UniqueIdentifier>{57ED9FB8-43A5-E105-ACAC-BA6198837CF6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{B3F7140E-1F0C-3DBF-E88D-E01E546139F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StateMachine">
+      <UniqueIdentifier>{BB54AC3C-A7B7-3BE1-503D-74973C7F0764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stats">
+      <UniqueIdentifier>{F4391E0E-604E-46BF-29D0-E91E95A342F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game\BehaviorTree\ActionNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BehaviorTree\BehaviorTree.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BehaviorTree\Blackboard.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BehaviorTree\Decorator.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BehaviorTree\ParallellNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BehaviorTree\SelectorNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BehaviorTree\SequenceNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BoidMath.h" />
+    <ClInclude Include="Game\Components\BoidyAIComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\FriendshipComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\HungerComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Components\MovementComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\Boidy.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\Enemy.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyManager.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyNodes\BoidyArmy.h">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyNodes\BoidyAttack.h">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyNodes\BoidyEat.h">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyNodes\BoidyFlock.h">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyNodes\BoidyIdle.h">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyNodes\BoidySpiral.h">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyNodes\BoidyWalk.h">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\EnemyStates\EnemyAttack.h">
+      <Filter>Enemy\EnemyStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\GOAPPlanner.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy\Goal.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food\Apple.h">
+      <Filter>Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food\Banana.h">
+      <Filter>Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food\Chocolate.h">
+      <Filter>Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food\Food.h">
+      <Filter>Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food\Orange.h">
+      <Filter>Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food\States\HalfEatenState.h">
+      <Filter>Food\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food\States\NotEatenState.h">
+      <Filter>Food\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameWorld.h" />
+    <ClInclude Include="Game\ObjectPool\ObjectPool.h">
+      <Filter>ObjectPool</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\ObjectPool\ObjectPoolManager.h">
+      <Filter>ObjectPool</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player\Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player\PlayerStates\PlayerDash.h">
+      <Filter>Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player\PlayerStates\PlayerFeed.h">
+      <Filter>Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player\PlayerStates\PlayerMove.h">
+      <Filter>Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player\PlayerStates\PlayerPet.h">
+      <Filter>Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player\PlayerStates\PlayerSmile.h">
+      <Filter>Player\PlayerStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PostMaster\Observer.h">
+      <Filter>PostMaster</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PostMaster\PostMaster.h">
+      <Filter>PostMaster</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Random.h" />
+    <ClInclude Include="Game\Scene\Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Scene\SceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\StateMachine\StateMachine.h">
+      <Filter>StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Stats\Stats.h">
+      <Filter>Stats</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game\App.cpp" />
+    <ClCompile Include="Game\BehaviorTree\ActionNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BehaviorTree\BehaviorTree.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BehaviorTree\Blackboard.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BehaviorTree\Decorator.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BehaviorTree\ParallellNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BehaviorTree\SelectorNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BehaviorTree\SequenceNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Components\BoidyAIComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Components\MovementComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\Boidy.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyManager.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyNodes\BoidyArmy.cpp">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyNodes\BoidyAttack.cpp">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyNodes\BoidyEat.cpp">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyNodes\BoidyFlock.cpp">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyNodes\BoidyIdle.cpp">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyNodes\BoidySpiral.cpp">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyNodes\BoidyWalk.cpp">
+      <Filter>Enemy\EnemyNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\EnemyStates\EnemyAttack.cpp">
+      <Filter>Enemy\EnemyStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\GOAPPlanner.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy\Goal.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food\Apple.cpp">
+      <Filter>Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food\Banana.cpp">
+      <Filter>Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food\Chocolate.cpp">
+      <Filter>Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food\Food.cpp">
+      <Filter>Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food\Orange.cpp">
+      <Filter>Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food\States\HalfEatenState.cpp">
+      <Filter>Food\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food\States\NotEatenState.cpp">
+      <Filter>Food\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GameWorld.cpp" />
+    <ClCompile Include="Game\ObjectPool\ObjectPool.cpp">
+      <Filter>ObjectPool</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\ObjectPool\ObjectPoolManager.cpp">
+      <Filter>ObjectPool</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\PlayerStates\PlayerDash.cpp">
+      <Filter>Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\PlayerStates\PlayerFeed.cpp">
+      <Filter>Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\PlayerStates\PlayerMove.cpp">
+      <Filter>Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\PlayerStates\PlayerPet.cpp">
+      <Filter>Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player\PlayerStates\PlayerSmile.cpp">
+      <Filter>Player\PlayerStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PostMaster\Observer.cpp">
+      <Filter>PostMaster</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PostMaster\PostMaster.cpp">
+      <Filter>PostMaster</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Random.cpp" />
+    <ClCompile Include="Game\Scene\Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Scene\SceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\StateMachine\StateMachine.cpp">
+      <Filter>StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Stats\Stats.cpp">
+      <Filter>Stats</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

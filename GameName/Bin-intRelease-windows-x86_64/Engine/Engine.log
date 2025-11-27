@@ -1,0 +1,27 @@
+﻿  compilation object save succeeded; see C:\Users\Jenny\Documents\GitHub\JennyMarcusCringe\JennyMarcusCringe\GameName\BinRelease-windows-x86_64\Engine\RayTracerTest_PS.cso
+  compilation object save succeeded; see C:\Users\Jenny\Documents\GitHub\JennyMarcusCringe\JennyMarcusCringe\GameName\BinRelease-windows-x86_64\Engine\RayTracerTest_VS.cso
+C:\Users\Jenny\Documents\GitHub\JennyMarcusCringe\JennyMarcusCringe\GameName\Source\Engine\RayTracing_CS.hlsl(57,21-46): warning X3203: signed/unsigned mismatch, unsigned assumed
+C:\Users\Jenny\Documents\GitHub\JennyMarcusCringe\JennyMarcusCringe\GameName\Source\Engine\RayTracing_CS.hlsl(86,5-80): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Jenny\Documents\GitHub\JennyMarcusCringe\JennyMarcusCringe\GameName\BinRelease-windows-x86_64\Engine\RayTracing_CS.cso
+  Engine.cpp
+  Camera.cpp
+  DDSTextureLoader11.cpp
+  DepthBuffer.cpp
+  FullscreenEffect.cpp
+  GBuffer.cpp
+  GraphicsEngine.cpp
+  RayTracing.cpp
+  RenderTarget.cpp
+  Shader.cpp
+  Sprite.cpp
+  SpriteDrawer.cpp
+  StringHelper.cpp
+  Texture.cpp
+  Camera.cpp
+d3d11.lib(d3d11.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in DXGI.lib(dxgi.dll); second definition ignored
+DDSTextureLoader11.obj : warning LNK4006: "long __cdecl DirectX::CreateDDSTextureFromMemory(struct ID3D11Device *,unsigned char const *,unsigned __int64,struct ID3D11Resource * *,struct ID3D11ShaderResourceView * *,unsigned __int64,enum DirectX::DDS_ALPHA_MODE *)" (?CreateDDSTextureFromMemory@DirectX@@YAJPEAUID3D11Device@@PEBE_KPEAPEAUID3D11Resource@@PEAPEAUID3D11ShaderResourceView@@2PEAW4DDS_ALPHA_MODE@1@@Z) already defined in DirectXTK.lib(DDSTextureLoader.obj); second definition ignored
+DDSTextureLoader11.obj : warning LNK4006: "long __cdecl DirectX::CreateDDSTextureFromFile(struct ID3D11Device *,wchar_t const *,struct ID3D11Resource * *,struct ID3D11ShaderResourceView * *,unsigned __int64,enum DirectX::DDS_ALPHA_MODE *)" (?CreateDDSTextureFromFile@DirectX@@YAJPEAUID3D11Device@@PEB_WPEAPEAUID3D11Resource@@PEAPEAUID3D11ShaderResourceView@@_KPEAW4DDS_ALPHA_MODE@1@@Z) already defined in DirectXTK.lib(DDSTextureLoader.obj); second definition ignored
+DDSTextureLoader11.obj : warning LNK4006: "long __cdecl DirectX::CreateDDSTextureFromMemory(struct ID3D11Device *,struct ID3D11DeviceContext *,unsigned char const *,unsigned __int64,struct ID3D11Resource * *,struct ID3D11ShaderResourceView * *,unsigned __int64,enum DirectX::DDS_ALPHA_MODE *)" (?CreateDDSTextureFromMemory@DirectX@@YAJPEAUID3D11Device@@PEAUID3D11DeviceContext@@PEBE_KPEAPEAUID3D11Resource@@PEAPEAUID3D11ShaderResourceView@@3PEAW4DDS_ALPHA_MODE@1@@Z) already defined in DirectXTK.lib(DDSTextureLoader.obj); second definition ignored
+DDSTextureLoader11.obj : warning LNK4006: "long __cdecl DirectX::CreateDDSTextureFromFile(struct ID3D11Device *,struct ID3D11DeviceContext *,wchar_t const *,struct ID3D11Resource * *,struct ID3D11ShaderResourceView * *,unsigned __int64,enum DirectX::DDS_ALPHA_MODE *)" (?CreateDDSTextureFromFile@DirectX@@YAJPEAUID3D11Device@@PEAUID3D11DeviceContext@@PEB_WPEAPEAUID3D11Resource@@PEAPEAUID3D11ShaderResourceView@@_KPEAW4DDS_ALPHA_MODE@1@@Z) already defined in DirectXTK.lib(DDSTextureLoader.obj); second definition ignored
+  Engine.vcxproj -> C:\Users\Jenny\Documents\GitHub\JennyMarcusCringe\JennyMarcusCringe\GameName\BinRelease-windows-x86_64\Engine\Engine.lib

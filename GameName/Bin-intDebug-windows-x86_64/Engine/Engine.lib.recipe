@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\eriks\OneDrive\Skrivbord\Runner\GameName\BinDebug-windows-x86_64\Engine\RayTracerTest_PS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\eriks\OneDrive\Skrivbord\Runner\GameName\BinDebug-windows-x86_64\Engine\RayTracerTest_VS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\eriks\OneDrive\Skrivbord\Runner\GameName\BinDebug-windows-x86_64\Engine\RayTracing_CS.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

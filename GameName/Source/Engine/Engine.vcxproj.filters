@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine">
+      <UniqueIdentifier>{12A1320E-FE58-745B-6760-4DB753370F4C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Animation">
+      <UniqueIdentifier>{81580911-6DE7-92DA-1606-A7D50274A380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Components">
+      <UniqueIdentifier>{E776F566-53E3-B061-1CD7-48BF8802D3C9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\GameObject">
+      <UniqueIdentifier>{524C157E-BEB8-D078-87AC-68D6F3D7F2E0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics">
+      <UniqueIdentifier>{92BD692F-FE1E-473D-878C-8DEFF3EC7DFC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\Camera">
+      <UniqueIdentifier>{CA1952BC-B629-FE8C-1FE3-62AB0B12ED25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\DDSTextureLoader">
+      <UniqueIdentifier>{64E8F834-50CF-BA2C-F91F-214AE5E53393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\FullScreenEffect">
+      <UniqueIdentifier>{C1352ABB-AD1C-ECB2-566D-52D042336519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\GBuffer">
+      <UniqueIdentifier>{E278BF32-4E86-ED18-D76C-E9034379B9CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\RayTracing">
+      <UniqueIdentifier>{35784C9B-219E-1602-0AE4-9BCDF6A83BCE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\ShaderCode">
+      <UniqueIdentifier>{D313055B-BF39-CFC1-A87F-548D9444F48D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\Sprite">
+      <UniqueIdentifier>{98E2B6E2-84F2-62B3-EDAB-C7D1D9DA514C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphics\StringHelper">
+      <UniqueIdentifier>{D8009D06-C451-8848-EDB5-760AD9651BB2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Engine\Animation\AnimationPlayer.h">
+      <Filter>src\Engine\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\AudioEngine.h">
+      <Filter>src\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Components\AnimationComponent.h">
+      <Filter>src\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Components\Component.h">
+      <Filter>src\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Components\SpriteRendererComponent.h">
+      <Filter>src\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Components\StatsComponent.h">
+      <Filter>src\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Components\TransformComponent.h">
+      <Filter>src\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Engine.h">
+      <Filter>src\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\GameObject\GameObject.h">
+      <Filter>src\Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\Camera.h">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\Camera\Camera.h">
+      <Filter>src\Engine\Graphics\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\DDSTextureLoader\DDSTextureLoader11.h">
+      <Filter>src\Engine\Graphics\DDSTextureLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\DepthBuffer.h">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\FullScreenEffect\FullscreenEffect.h">
+      <Filter>src\Engine\Graphics\FullScreenEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\GBuffer\GBuffer.h">
+      <Filter>src\Engine\Graphics\GBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\GraphicsEngine.h">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\GraphicsEngineData.h">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\RayTracing\RayTracing.h">
+      <Filter>src\Engine\Graphics\RayTracing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\RenderTarget.h">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\ShaderCode\Shader.h">
+      <Filter>src\Engine\Graphics\ShaderCode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\Sprite\Sprite.h">
+      <Filter>src\Engine\Graphics\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\Sprite\SpriteDrawer.h">
+      <Filter>src\Engine\Graphics\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\StringHelper\StringHelper.h">
+      <Filter>src\Engine\Graphics\StringHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Graphics\Texture.h">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Engine\Animation\AnimationPlayer.cpp">
+      <Filter>src\Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Engine.cpp">
+      <Filter>src\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\GameObject\GameObject.cpp">
+      <Filter>src\Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\Camera.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\Camera\Camera.cpp">
+      <Filter>src\Engine\Graphics\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\DDSTextureLoader\DDSTextureLoader11.cpp">
+      <Filter>src\Engine\Graphics\DDSTextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\DepthBuffer.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\FullScreenEffect\FullscreenEffect.cpp">
+      <Filter>src\Engine\Graphics\FullScreenEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\GBuffer\GBuffer.cpp">
+      <Filter>src\Engine\Graphics\GBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\GraphicsEngine.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\RayTracing\RayTracing.cpp">
+      <Filter>src\Engine\Graphics\RayTracing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\RenderTarget.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\ShaderCode\Shader.cpp">
+      <Filter>src\Engine\Graphics\ShaderCode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\Sprite\Sprite.cpp">
+      <Filter>src\Engine\Graphics\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\Sprite\SpriteDrawer.cpp">
+      <Filter>src\Engine\Graphics\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\StringHelper\StringHelper.cpp">
+      <Filter>src\Engine\Graphics\StringHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\Graphics\Texture.cpp">
+      <Filter>src\Engine\Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="RayTracerTest_PS.hlsl" />
+    <FxCompile Include="RayTracerTest_VS.hlsl" />
+    <FxCompile Include="RayTracing_CS.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common.hlsli" />
+    <None Include="RayTracingStructs.hlsli" />
+  </ItemGroup>
+</Project>
