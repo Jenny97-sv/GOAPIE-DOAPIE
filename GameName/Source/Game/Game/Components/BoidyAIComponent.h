@@ -47,7 +47,7 @@ private:
     bool BuildGOAP();
     bool BuildBehaviorTree();
     void UpdateWorldState(float dt);
-    bool ExecuteBehavior(GoalAction* action, BoidBehaviorType type, float dt);
+    bool ExecuteBehavior(GoalAction* action, eBoidBehaviorType type, float dt);
     void UpdateFriendColor(const float friendshipMeter);
 
     TransformComponent* transformComponent = nullptr;

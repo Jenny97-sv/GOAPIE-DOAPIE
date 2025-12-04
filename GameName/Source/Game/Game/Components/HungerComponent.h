@@ -7,7 +7,7 @@ class HungerComponent : public Component
 public:
     void Update(float dt) override
     {
-        hunger += dt * hungerDecreaser;
+        hunger += dt * hungerIncreaser;
         hunger = std::clamp(hunger, 0.f, maxHunger);
     }
 
@@ -34,7 +34,8 @@ public:
     }
 
 private:
-    float hungerDecreaser = 0.2f;
+    float hungerIncreaser = 0.2f;
     float hunger = 0.f;
     const float maxHunger = 10.f;
+    // Starts out not hungry
 };

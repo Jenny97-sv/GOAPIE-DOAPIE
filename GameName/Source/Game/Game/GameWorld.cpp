@@ -25,7 +25,7 @@ bool GameWorld::Init()
 	EnemyManager& enemyManager = EnemyManager::GetInstance();
 
 
-	for (size_t i = 0; i < 20; i++)
+	for (size_t i = 0; i < 12; i++)
 	{
 		std::unique_ptr<Boidy> boid = std::make_unique<Boidy>();
 		Boidy* boidyRaw = boid.get();
@@ -46,7 +46,7 @@ bool GameWorld::Init()
 
 	return true;
 }
-void GameWorld::Update(float aDeltaTime)
+void GameWorld::Update(const float aDeltaTime)
 {
 	if (GetAsyncKeyState(VK_ESCAPE)) // So you can quit the application
 	{

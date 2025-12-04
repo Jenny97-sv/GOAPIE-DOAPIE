@@ -262,7 +262,7 @@ void EnemyManager::UpdateEnemies(const float deltaTime)
 		boid->alignmentDirection = alignment;
 		boid->seperationDirection = separation;
 
-		float sepWeight = 1.0f;
+		float sepWeight = 2.0f;
 		float aliWeight = 0.1f;
 		float cohWeight = 0.5f;
 
@@ -343,7 +343,7 @@ void EnemyManager::UpdateFormationDirection(const float dt)
 
 	if (!outOfBounds) return;
 
-	std::cout << "OUTSIDE!!!" << std::endl;
+	//std::cout << "OUTSIDE!!!" << std::endl;
 
 	// --- FIX #2: avoid double-triggers by clamping ---
 	if (left < minX)   newCenter.x = minX + halfWidth;

@@ -4,7 +4,7 @@ Scene::~Scene()
 {
 }
 
-void Scene::Update(float dt)
+void Scene::Update(const float dt)
 {
     for (std::unique_ptr<GameObject>& go : gameObjects)
         if (go->isActive)
@@ -53,7 +53,7 @@ void Scene::RemoveObject(GameObject* obj)
         }
     }
 
-    //std::cout << "Couldn't find the object" << std::endl;
+    std::cout << "Couldn't find the object" << std::endl;
 }
 
 GameObject* Scene::FindObjectByName(const std::string& name)

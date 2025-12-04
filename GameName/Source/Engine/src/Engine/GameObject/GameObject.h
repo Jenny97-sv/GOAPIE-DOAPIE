@@ -16,12 +16,11 @@ public:
 	const std::string& GetName() const { return name; }
 	void SetName(const std::string& n) { name = n; }
 
-	virtual bool Init(); // Add components here
+	virtual bool Init();
 
-	virtual void Start(); // Reuses same object
+	virtual void Start();
 	virtual void Update(const float dt);
 	virtual void Render();
-	//void Bounds();
 
 	template<typename T, typename... Args>
 	T* AddComponent(Args&&... args);

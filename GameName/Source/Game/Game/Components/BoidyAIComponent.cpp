@@ -142,48 +142,40 @@ bool BoidyAIComponent::BuildGOAP()
 		return false;
 	}
 
-	// ────────────────────────────────────────────────
-	// GOALS
-	// ────────────────────────────────────────────────
-
 	// Goal: Befriend
 	{
 		Goal& befriend = goals.emplace_back();
-		befriend.AddCondition(eWorldKey::IsAlerted, 1);
+		befriend.AddCondition(eWorldKey::eIsAlerted, 1);
 		befriend.name = "Befriend";
 	}
 
 	// Goal: Roam
 	{
 		Goal& roam = goals.emplace_back();
-		roam.AddCondition(eWorldKey::IsAlerted, 0);
-		roam.AddCondition(eWorldKey::HasTakenDamage, 0);
+		roam.AddCondition(eWorldKey::eIsAlerted, 0);
+		roam.AddCondition(eWorldKey::eHasTakenDamage, 0);
 		roam.name = "Roam";
 	}
 
 	// Goal: Attack
 	{
 		Goal& attack = goals.emplace_back();
-		attack.AddCondition(eWorldKey::IsAlerted, 1);
-		attack.AddCondition(eWorldKey::HasTakenDamage, 1);
+		attack.AddCondition(eWorldKey::eIsAlerted, 1);
+		attack.AddCondition(eWorldKey::eHasTakenDamage, 1);
 		attack.name = "Attack";
 	}
-
-	// ────────────────────────────────────────────────
-	// ACTIONS
-	// ────────────────────────────────────────────────
 
 	// Action: Befriend
 	{
 		GoalAction& act = actions.emplace_back();
 		act.cost = 2;
 		act.effectiveness = 1;
-		act.behavior = BoidBehaviorType::eSpiral;
+		act.behavior = eBoidBehaviorType::eSpiral;
 		act.name = "Befriend";
 
-		act.AddEffect(eWorldKey::IsLookingForPlayer, 1);
-		act.AddPrecondition(eWorldKey::Eat, 0);
-		act.AddPrecondition(eWorldKey::HasTakenDamage, 0);
+		act.AddEffect(eWorldKey::eIsLookingForPlayer, 1);
+		act.AddPrecondition(eWorldKey::eEat, 0);
+		act.AddPrecondition(eWorldKey::eHasTakenDamage, 0);
 	}
 
 	// Action: Eat
@@ -191,11 +183,11 @@ bool BoidyAIComponent::BuildGOAP()
 		GoalAction& act = actions.emplace_back();
 		act.cost = 1;
 		act.effectiveness = 0.5f;
-		act.behavior = BoidBehaviorType::eEat;
+		act.behavior = eBoidBehaviorType::eEat;
 		act.name = "Eat";
 
-		act.AddEffect(eWorldKey::Eat, 1);
-		act.AddPrecondition(eWorldKey::Eat, 1);
+		act.AddEffect(eWorldKey::eEat, 1);
+		act.AddPrecondition(eWorldKey::eEat, 1);
 	}
 
 	// Action: Free roam
@@ -203,25 +195,25 @@ bool BoidyAIComponent::BuildGOAP()
 		GoalAction& act = actions.emplace_back();
 		act.cost = 1;
 		act.effectiveness = 0.5f;
-		act.behavior = BoidBehaviorType::eFlock;
+		act.behavior = eBoidBehaviorType::eFlock;
 		act.name = "Flock";
 
-		act.AddEffect(eWorldKey::IsAlerted, 0);
-		act.AddPrecondition(eWorldKey::HasTakenDamage, 0);
+		act.AddEffect(eWorldKey::eIsAlerted, 0);
+		act.AddPrecondition(eWorldKey::eHasTakenDamage, 0);
 	}
 
-	// Action: Army / Group attack prep
+	// Action: Army 
 	{
 		GoalAction& act = actions.emplace_back();
 		act.cost = 4;
 		act.effectiveness = 5;
-		act.behavior = BoidBehaviorType::eArmy;
+		act.behavior = eBoidBehaviorType::eArmy;
 		act.name = "Army";
 
-		act.AddEffect(eWorldKey::IsAlerted, 1);
-		act.AddPrecondition(eWorldKey::HasTakenDamage, 1);
-		act.AddPrecondition(eWorldKey::CircleAroundPlayer, 0);
-		act.AddPrecondition(eWorldKey::Eat, 0);
+		act.AddEffect(eWorldKey::eIsAlerted, 1);
+		act.AddPrecondition(eWorldKey::eHasTakenDamage, 1);
+		act.AddPrecondition(eWorldKey::eCircleAroundPlayer, 0);
+		act.AddPrecondition(eWorldKey::eEat, 0);
 	}
 
 	// Action: Attack
@@ -229,16 +221,16 @@ bool BoidyAIComponent::BuildGOAP()
 		GoalAction& act = actions.emplace_back();
 		act.cost = 3;
 		act.effectiveness = 5;
-		act.behavior = BoidBehaviorType::eAttack;
+		act.behavior = eBoidBehaviorType::eAttack;
 		act.name = "Attack";
 
-		act.AddEffect(eWorldKey::IsAlerted, 1);
-		act.AddEffect(eWorldKey::HasFormationSlot, 1);
-		act.AddEffect(eWorldKey::CircleAroundPlayer, 1);
+		act.AddEffect(eWorldKey::eIsAlerted, 1);
+		act.AddEffect(eWorldKey::eHasFormationSlot, 1);
+		act.AddEffect(eWorldKey::eCircleAroundPlayer, 1);
 
-		act.AddPrecondition(eWorldKey::HasTakenDamage, 1);
-		act.AddPrecondition(eWorldKey::Eat, 0);
-		act.AddPrecondition(eWorldKey::HasFormationSlot, 0);
+		act.AddPrecondition(eWorldKey::eHasTakenDamage, 1);
+		act.AddPrecondition(eWorldKey::eEat, 0);
+		act.AddPrecondition(eWorldKey::eHasFormationSlot, 0);
 	}
 
 	return true;
@@ -340,19 +332,19 @@ bool BoidyAIComponent::BuildBehaviorTree()
 
 void BoidyAIComponent::UpdateWorldState(float dt)
 {
-	SetWorldValue(worldState, eWorldKey::HP, statsComponent->stats.HP);
-	SetWorldValue(worldState, eWorldKey::HasTakenDamage, boidy->hasTakenDamage);
-	SetWorldValue(worldState, eWorldKey::IsAlerted, boidy->isAlerted);
-	SetWorldValue(worldState, eWorldKey::IsLookingForPlayer, boidy->isLookingForPlayer);
-	SetWorldValue(worldState, eWorldKey::FriendValue, friendshipComponent->GetCurrent());
-	SetWorldValue(worldState, eWorldKey::Eat, shouldEat);
-	SetWorldValue(worldState, eWorldKey::CircleAroundPlayer, boidy->shouldCircleAroundPlayer);
-	SetWorldValue(worldState, eWorldKey::HasFormationSlot, boidy->hasFormationSlot);
+	SetWorldValue(worldState, eWorldKey::eHP, statsComponent->stats.HP);
+	SetWorldValue(worldState, eWorldKey::eHasTakenDamage, boidy->hasTakenDamage);
+	SetWorldValue(worldState, eWorldKey::eIsAlerted, boidy->isAlerted);
+	SetWorldValue(worldState, eWorldKey::eIsLookingForPlayer, boidy->isLookingForPlayer);
+	SetWorldValue(worldState, eWorldKey::eFriendValue, friendshipComponent->GetCurrent());
+	SetWorldValue(worldState, eWorldKey::eEat, shouldEat);
+	SetWorldValue(worldState, eWorldKey::eCircleAroundPlayer, boidy->shouldCircleAroundPlayer);
+	SetWorldValue(worldState, eWorldKey::eHasFormationSlot, boidy->hasFormationSlot);
 }
 
 
 
-bool BoidyAIComponent::ExecuteBehavior(GoalAction* action, BoidBehaviorType type, float dt)
+bool BoidyAIComponent::ExecuteBehavior(GoalAction* action, eBoidBehaviorType type, float dt)
 {
 	eNodeStatus status = eNodeStatus::eInvalid;
 	bool interrupt = !(action->ArePreconditionsMet(worldState));
@@ -360,27 +352,27 @@ bool BoidyAIComponent::ExecuteBehavior(GoalAction* action, BoidBehaviorType type
 	//status = behaviorTree->TickAction(action, dt, interrupt);
 	switch (type)
 	{
-	case BoidBehaviorType::eArmy:
+	case eBoidBehaviorType::eArmy:
 		status = behaviorTree->TickAction(armyAction.get(), dt, interrupt);
 		break;
 
-	case BoidBehaviorType::eFlock:
+	case eBoidBehaviorType::eFlock:
 		status = behaviorTree->TickAction(flockAction.get(), dt, interrupt);
 		break;
 
-	case BoidBehaviorType::eSpiral:
+	case eBoidBehaviorType::eSpiral:
 		status = behaviorTree->TickAction(spiralAction.get(), dt, interrupt);
 		break;
 
-	case BoidBehaviorType::eEat:
+	case eBoidBehaviorType::eEat:
 		status = behaviorTree->TickAction(eatAction.get(), dt, interrupt);
 		break;
 
-	case BoidBehaviorType::eAttack:
+	case eBoidBehaviorType::eAttack:
 		status = behaviorTree->TickAction(attackAction.get(), dt, interrupt);
 		break;
 
-	case BoidBehaviorType::eNone:
+	case eBoidBehaviorType::eNone:
 		return true;
 
 	default:

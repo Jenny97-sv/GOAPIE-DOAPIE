@@ -65,7 +65,7 @@ std::deque<GoalAction*> GOAPPlanner::MakePlan(WorldState world, std::vector<Goal
 
 void GOAPPlanner::ApplyEffects(WorldState& world, const WorldState& eff)
 {
-    for (size_t i = 0; i < (size_t)eWorldKey::Count; i++)
+    for (size_t i = 0; i < (size_t)eWorldKey::eCount; i++)
     {
         if (eff[i] != -1.0f)   // -1 means “no effect”
             world[i] = eff[i];

@@ -11,7 +11,7 @@ class GameWorld : public Scene
 public:
     ~GameWorld() override;
     bool Init() override;
-    void Update(float dt) override;
+    void Update(const float dt) override;
     void Render() override;
 
 private:

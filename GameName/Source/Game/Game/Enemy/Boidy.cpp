@@ -58,7 +58,7 @@ bool Boidy::Init()
 
 	PostMaster::GetInstance().Subscribe(this);
 
-	InitEnemy(100, 50, 400, 200);
+	InitEnemy(100, 100, 400, 200);
 
 	isAlerted = false;
 

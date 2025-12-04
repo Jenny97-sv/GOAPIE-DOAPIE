@@ -8,20 +8,20 @@
 
 enum class eWorldKey : size_t 
 {
-	HP,
-	HasTakenDamage,
-	IsAlerted,
-	IsLookingForPlayer,
-	FriendValue,
-	Eat,
-	CircleAroundPlayer,
-	HasFormationSlot,
-	Count
+	eHP,
+	eHasTakenDamage,
+	eIsAlerted,
+	eIsLookingForPlayer,
+	eFriendValue,
+	eEat,
+	eCircleAroundPlayer,
+	eHasFormationSlot,
+	eCount
 };
 
-using WorldState = std::array<float, static_cast<size_t>(eWorldKey::Count)>;
+using WorldState = std::array<float, static_cast<size_t>(eWorldKey::eCount)>;
 
-enum class BoidBehaviorType
+enum class eBoidBehaviorType
 {
 	eFlock,
 	eArmy,
@@ -79,7 +79,7 @@ class GoalAction
 public:
 	float cost = 1.f;
 	float effectiveness = 1.f;
-	BoidBehaviorType behavior = BoidBehaviorType::eNone;
+	eBoidBehaviorType behavior = eBoidBehaviorType::eNone;
 	std::string name = "";
 
 	GoalAction()

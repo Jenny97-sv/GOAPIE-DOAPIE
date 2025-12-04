@@ -10,7 +10,7 @@ public:
     virtual ~Scene();
 
     virtual bool Init() = 0;
-    virtual void Update(float dt);
+    virtual void Update(const float dt);
     virtual void Render();
     virtual void Unload();
 
